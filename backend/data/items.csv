@@ -1,0 +1,101 @@
+id,title,description,price,location
+1,Sword of Valor,A legendary blade forged in dragon fire,149.99,JO
+2,Shield of the Ancients,An impenetrable shield from the old kingdom,89.50,SA
+3,Dragon's Breath Potion,Grants temporary fire resistance,25.00,JO
+4,Shadow Cloak,Invisible in darkness,199.00,SA
+5,Hunter's Bow,Precise long-range bow,120.00,JO
+6,Mana Crystal,Restores 500 MP,35.75,SA
+7,Steel Helmet,Standard military-grade helmet,45.00,JO
+8,Leather Boots of Speed,Increases movement speed by 20%,67.25,SA
+9,Mystic Ring,Boosts magic attack power,310.00,JO
+10,Battle Axe of Fury,Massive two-handed weapon,275.50,SA
+11,Health Elixir,Full health restoration,15.00,JO
+12,Enchanted Gloves,Increases item find rate,55.00,SA
+13,Fire Staff,Launches fireballs at enemies,420.00,JO
+14,Ice Amulet,Freezes nearby enemies on hit,280.75,SA
+15,Adventurer's Backpack,Extra 20 inventory slots,42.00,JO
+16,Wolf Mount Ticket,Summons a rideable wolf,500.00,SA
+17,Silver Pendant,Increases gold drop rate,78.50,JO
+18,Thunder Spear,Deals lightning damage,340.00,SA
+19,Stone Golem Puppet,Tank companion,165.00,JO
+20,Phoenix Feather,Revives once upon death,999.99,SA
+21,Leather Armor,Lightweight basic armor,35.00,JO
+22,Chain Mail,Medium-weight armor,110.00,SA
+23,Plate Armor,Heavy-duty full body armor,225.00,JO
+24,Magic Wand of Light,Heals allies in combat,180.00,SA
+25,Throwing Knives x10,Stack of 10 sharp throwing knives,22.50,JO
+26,Rope of Binding,Immobilizes target for 5 seconds,30.00,SA
+27,Gem of Teleportation,Teleport to any visited location,750.00,JO
+28,Scroll of Fireball,Single-use fire spell,18.00,SA
+29,Scroll of Healing,Single-use heal spell,20.00,JO
+30,Scroll of Town Portal,Teleport back to town,12.50,SA
+31,Iron Sword,Beginner weapon,15.00,JO
+32,Bronze Dagger,Fast attack speed dagger,28.00,SA
+33,Wooden Staff,Simple magic staff,10.00,JO
+34,Bone Club,Primitive but effective,8.50,SA
+35,Crystal Orb,Enhances spell casting,200.00,JO
+36,Wizard Hat,Increases magic defense,48.00,SA
+37,Pirate Hat,Increases luck stat,32.00,JO
+38,War Hammer,Slow but devastating,195.00,SA
+39,Elven Dagger,Quick and silent,135.00,JO
+40,Orcish Battleaxe,Brutal orc-crafted weapon,155.00,SA
+41,Dwarven Shield,Made frommithril alloy,185.00,JO
+42,Troll Skin Armor,Resistant to poison,140.00,SA
+43,Night Vision Goggles,See in complete darkness,95.00,JO
+44,Speed Boots,Increases running speed,60.00,SA
+45,Titan's Gauntlets,Massive strength boost,290.00,JO
+46,Dragon Scale Shield,Fire-resistant shield,350.00,SA
+47,Ancient Map,Reveals hidden treasure locations,45.00,JO
+48,Enchanted Compass,Points to nearest quest,25.00,SA
+49,Soul Gem,Used for enchanting,125.00,JO
+50,Rune Stone,Activates ancient portals,175.00,SA
+51,Hunting Knife,Perfect for crafting,18.00,JO
+52,Fishing Rod,Catch rare aquatic items,22.00,SA
+53,Pickaxe,For mining rare ores,35.00,JO
+54,Lumber Axe,For gathering wood,20.00,SA
+55,Herb Picking Bag,Extra herbs from gathering,15.00,JO
+56,Adventure Journal,Tracks quest progress,10.00,SA
+57,Teleport Scroll,Instant teleport to spawn,8.00,JO
+58,Resurrection Stone,Revive with full health,800.00,SA
+59,Goblin Earring,Increases stealth,38.00,JO
+60,Vampire Fang,Life steal on hit,265.00,SA
+61,Angel Wings,Grants temporary flight,600.00,JO
+62,Demon Horn,Boosts dark magic,220.00,SA
+63,Fairy Dust,Enhances potion effects,55.00,JO
+64,Unicorn Mane,Healing over time effect,130.00,SA
+65,Phoenix Egg,Summons fire phoenix pet,450.00,JO
+66,Baby Dragon Egg,Summons baby dragon pet,700.00,SA
+67,Golden Apple,Instant level up,1500.00,JO
+68,Silver Apple,50% experience boost,350.00,SA
+69,Bronze Apple,25% experience boost,150.00,JO
+70,Water Breathing Charm,Underwater breathing,85.00,SA
+71,Fire Resistance Ring,50% fire damage reduction,110.00,JO
+72,Ice Resistance Cloak,50% ice damage reduction,115.00,SA
+73,Lightning Rod Staff,Absorbs lightning attacks,190.00,JO
+74,Earth Shield,Blocks physical attacks,145.00,SA
+75,Wind Boots,Double jump ability,165.00,JO
+76,Shadow Dagger,Critical hit bonus,230.00,SA
+77,Healing Staff,Area of effect healing,310.00,JO
+78,Berserker Axe,Damage increases when low health,285.00,SA
+79,Assassin's Blade,Backstab bonus damage,245.00,JO
+80,Paladin's Sword,Holy damage bonus,325.00,SA
+81,Necromancer's Tome,Summons undead allies,380.00,JO
+82,Bard's Lute,Buffs party members,175.00,SA
+83,Ranger's Cloak,Increases ranged damage,140.00,JO
+84,Cleric's Holy Symbol,Enhances healing spells,210.00,SA
+85,Warlock's Amulet,Dark magic boost,295.00,JO
+86,Alchemist's Toolkit,Faster potion crafting,80.00,SA
+87,Enchanter's Ring,Increases enchantment success,160.00,JO
+88,Blacksmith's Hammer,Faster equipment repair,45.00,SA
+89,Merchant's Bag,Increases sell prices,90.00,JO
+90,Explorer's Compass,Reveals map fog,50.00,SA
+91,Treasure Chest Key,Opens locked chests,200.00,JO
+92,Dungeon Map,Shows dungeon layout,35.00,SA
+93,Battle Standard,Buffs nearby allies,125.00,JO
+94,War Horn,Increases party attack,110.00,SA
+95,Siege Ram,Destroys barricades,400.00,JO
+96,Healing Totem,Regeneration area,185.00,SA
+97,Flame Trap,Places explosive trap,65.00,JO
+98,Frost Trap,Places freezing trap,70.00,SA
+99,Shock Trap,Places lightning trap,75.00,JO
+100,Master Key,Opens any lock,999.99,SA
