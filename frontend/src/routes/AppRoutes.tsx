@@ -3,6 +3,7 @@ import { LoginPage } from '../pages/LoginPage'
 import { ProductsPage } from '../pages/ProductsPage'
 import { ProductDetailsPage } from '../pages/ProductDetailsPage'
 import { ReceiptPage } from '../pages/ReceiptPage'
+import { PurchasesPage } from '../pages/PurchasesPage'
 import { ProtectedRoute } from '../components/ProtectedRoute'
 
 export default function AppRoutes() {
@@ -30,6 +31,14 @@ export default function AppRoutes() {
         element={
           <ProtectedRoute>
             <ReceiptPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/purchases"
+        element={
+          <ProtectedRoute>
+            <PurchasesPage />
           </ProtectedRoute>
         }
       />

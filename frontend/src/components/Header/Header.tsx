@@ -20,6 +20,9 @@ export function Header() {
           <button className="header-link" onClick={() => navigate('/products')}>
             Products
           </button>
+          <button className="header-link" onClick={() => navigate('/purchases')}>
+            My Purchases
+          </button>
           <button className="header-logout" onClick={handleLogout}>
             Logout
           </button>

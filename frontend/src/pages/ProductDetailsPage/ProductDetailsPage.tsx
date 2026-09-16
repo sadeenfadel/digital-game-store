@@ -55,6 +55,11 @@ export function ProductDetailsPage() {
           setPurchaseError('Product not found.')
           return
         }
+        if (axiosErr.response?.status === 409) {
+          setPurchaseError('You have already purchased this product.')
+          navigate('/purchases')
+          return
+        }
         if (axiosErr.response?.data?.error?.message) {
           setPurchaseError(axiosErr.response.data.error.message)
           return

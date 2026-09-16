@@ -22,3 +22,15 @@ class OrderDetailSchema(Schema):
     product_location = fields.Str(required=True)
     created_at = fields.Str(required=True)
     user_id = fields.Int(required=True)
+
+
+class OrderPaginationSchema(Schema):
+    page = fields.Int(required=True)
+    per_page = fields.Int(required=True)
+    total = fields.Int(required=True)
+    pages = fields.Int(required=True)
+
+
+class OrderListResponseSchema(Schema):
+    items = fields.List(fields.Nested(OrderDetailSchema), required=True)
+    pagination = fields.Nested(OrderPaginationSchema, required=True)

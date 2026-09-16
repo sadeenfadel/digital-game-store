@@ -7,6 +7,18 @@
 
 SQLite is used - no database server required.
 
+## Why SQLite?
+
+SQLite was chosen for this assessment because:
+
+- **Zero setup** - no separate database server to install, configure, or manage.
+- **File-based** - the entire database is a single file (`data/game_store.db`), easy to inspect and commit-free during development.
+- **Serverless** - ideal for single-process applications like this assessment.
+- **Full SQL support** - satisfies all relational needs (users, products, orders, keys, transactions) via SQLAlchemy ORM.
+- **Easy migration** - can switch to PostgreSQL/MySQL in production by changing `DATABASE_URL` in `.env` without touching models or queries, because all access goes through SQLAlchemy.
+
+For a production deployment with concurrent write load, PostgreSQL would be the natural upgrade path.
+
 ## Installation
 
 ```bash
@@ -50,8 +62,8 @@ python scripts/seed_demo_user.py
 ```
 
 **Demo credentials:**
-- Email: `demo@gamstore.com`
-- Password: `password123`
+- Email: `sadeenfadel@gmail.com`
+- Password: `sAdeen_11`
 
 ## Start the API
 
@@ -63,7 +75,7 @@ Runs at `http://localhost:5000`
 
 ## Swagger Documentation
 
-Open `http://localhost:5000/api/docs/` in your browser.
+Open `http://localhost:5000/docs/` in your browser for the dark-mode Swagger UI. The raw OpenAPI spec is at `http://localhost:5000/api/docs/openapi.json`.
 
 ## Health Check
 
@@ -83,7 +95,7 @@ python -m pytest tests/ -v
 # Login
 TOKEN=$(curl -s -X POST http://localhost:5000/api/auth/login \
   -H "Content-Type: application/json" \
-  -d '{"email":"demo@gamstore.com","password":"password123"}' \
+  -d '{"email":"sadeenfadel@gmail.com","password":"sAdeen_11"}' \
   | python3 -c "import sys,json; print(json.load(sys.stdin)['access_token'])")
 
 # List products

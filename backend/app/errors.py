@@ -5,26 +5,33 @@ from marshmallow import ValidationError
 logger = logging.getLogger(__name__)
 
 
+def _get_message(error):
+    """Extract custom message from webargs abort, falling back to default."""
+    return (getattr(error, "data", {}) or {}).get("message") or getattr(
+        error, "description", str(error)
+    )
+
+
 def register_error_handlers(app):
     @app.errorhandler(400)
     def bad_request(error):
-        message = getattr(error, "description", str(error))
-        return jsonify({"error": {"code": "BAD_REQUEST", "message": message}}), 400
+        return jsonify({"error": {"code": "BAD_REQUEST", "message": _get_message(error)}}), 400
 
     @app.errorhandler(401)
     def unauthorized(error):
-        message = getattr(error, "description", str(error))
-        return jsonify({"error": {"code": "UNAUTHORIZED", "message": message}}), 401
+        return jsonify({"error": {"code": "UNAUTHORIZED", "message": _get_message(error)}}), 401
 
     @app.errorhandler(403)
     def forbidden(error):
-        message = getattr(error, "description", str(error))
-        return jsonify({"error": {"code": "FORBIDDEN", "message": message}}), 403
+        return jsonify({"error": {"code": "FORBIDDEN", "message": _get_message(error)}}), 403
 
     @app.errorhandler(404)
     def not_found(error):
-        message = getattr(error, "description", str(error))
-        return jsonify({"error": {"code": "NOT_FOUND", "message": message}}), 404
+        return jsonify({"error": {"code": "NOT_FOUND", "message": _get_message(error)}}), 404
+
+    @app.errorhandler(409)
+    def conflict(error):
+        return jsonify({"error": {"code": "CONFLICT", "message": _get_message(error)}}), 409
 
     @app.errorhandler(422)
     def unprocessable(error):

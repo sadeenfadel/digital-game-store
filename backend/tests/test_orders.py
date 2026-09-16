@@ -93,3 +93,58 @@ class TestOrders:
             headers=auth_headers,
         )
         assert response.status_code == 422
+
+    def test_duplicate_purchase_rejected(self, client, auth_headers, demo_product):
+        first = client.post(
+            "/api/orders",
+            json={"product_id": demo_product.id},
+            headers=auth_headers,
+        )
+        assert first.status_code == 201
+
+        second = client.post(
+            "/api/orders",
+            json={"product_id": demo_product.id},
+            headers=auth_headers,
+        )
+        assert second.status_code == 409
+        assert "already purchased" in second.get_json()["error"]["message"].lower()
+
+    def test_same_product_allowed_for_different_users(
+        self, client, auth_headers, second_auth_headers, demo_product
+    ):
+        first = client.post(
+            "/api/orders",
+            json={"product_id": demo_product.id},
+            headers=auth_headers,
+        )
+        assert first.status_code == 201
+
+        second = client.post(
+            "/api/orders",
+            json={"product_id": demo_product.id},
+            headers=second_auth_headers,
+        )
+        assert second.status_code == 201
+
+    def test_list_own_orders(self, client, auth_headers, demo_product):
+        client.post("/api/orders", json={"product_id": demo_product.id}, headers=auth_headers)
+        response = client.get("/api/orders?page=1&per_page=10", headers=auth_headers)
+        assert response.status_code == 200
+        data = response.get_json()
+        assert data["pagination"]["total"] == 1
+        assert data["pagination"]["page"] == 1
+        assert len(data["items"]) == 1
+        assert data["items"][0]["product_title"] == "Test Product"
+
+    def test_list_orders_excludes_other_users(
+        self, client, auth_headers, second_auth_headers, demo_product
+    ):
+        client.post("/api/orders", json={"product_id": demo_product.id}, headers=auth_headers)
+        response = client.get("/api/orders?page=1&per_page=10", headers=second_auth_headers)
+        assert response.status_code == 200
+        assert response.get_json()["pagination"]["total"] == 0
+
+    def test_list_orders_requires_auth(self, client):
+        response = client.get("/api/orders")
+        assert response.status_code == 401

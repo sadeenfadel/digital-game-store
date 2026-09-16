@@ -34,8 +34,8 @@ The frontend and backend communicate exclusively through HTTP/JSON REST APIs.
 * SQLAlchemy ORM with Flask-SQLAlchemy
 * Alembic/Flask-Migrate for database migrations
 * JWT authentication
-* Swagger/OpenAPI documentation
-* SQLite database
+* Swagger/OpenAPI documentation (dark-mode UI at `/docs/`)
+* SQLite database (see [backend/README.md](backend/README.md) for rationale)
 * CSV product import
 * Pytest tests
 
@@ -48,7 +48,7 @@ See [backend/README.md](backend/README.md) for detailed backend setup instructio
 * Vite
 * React Router
 * Axios
-* CSS Modules
+* CSS (responsive global stylesheet)
 
 See [frontend/README.md](frontend/README.md) for detailed frontend setup instructions.
 
@@ -140,8 +140,10 @@ cp .env.example .env
 Configure:
 
 ```env
-VITE_API_BASE_URL=http://localhost:5000/api
+VITE_API_BASE_URL=/api
 ```
+
+The Vite dev server proxies `/api` requests to `http://localhost:5000` automatically (see `vite.config.ts`). No CORS issues in development.
 
 Then start the frontend:
 

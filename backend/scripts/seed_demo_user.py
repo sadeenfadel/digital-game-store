@@ -2,7 +2,7 @@
 """Seed Demo User for Digital Game Store.
 
 Creates a demo user for testing the API.
-Credentials: demo@gamstore.com / password123
+Credentials: sadeenfadel@gmail.com / sAdeen_11
 
 Usage:
     cd backend

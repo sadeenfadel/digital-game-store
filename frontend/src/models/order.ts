@@ -17,6 +17,18 @@ export interface OrderDetail {
   user_id: number
 }
 
+export interface OrderPagination {
+  page: number
+  per_page: number
+  total: number
+  pages: number
+}
+
+export interface OrderListResponse {
+  items: OrderDetail[]
+  pagination: OrderPagination
+}
+
 export interface CreateOrderRequest {
   product_id: number
 }
